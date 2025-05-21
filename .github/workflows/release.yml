@@ -1,6 +1,14 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    paths:
+      - '.github/workflows/release.yml'
+      - 'Tweak.x'
+      - 'control'
+    branches:
+      - 'main'
+  workflow_dispatch:  # 👉 允许手动触发
 
 jobs:
   build:
